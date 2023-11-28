@@ -1,0 +1,19 @@
+mixin header(headerMods, currentUrl)
+  header.header
+    .container
+      .header__wrap
+        .header__logo-block
+          if(currentUrl === "index.html")
+            span.header__logo
+              +icon("logo", 140, 24)
+
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +icon("logo", 140, 24)
+          span.header__logo-text крупный интегратор CRM<br>в Росcии и ещё 8 странах
+        .header__nav-block
+          +mainNav(headerLinks)
+
+        .header__contacts-block
+          +contacts()
+

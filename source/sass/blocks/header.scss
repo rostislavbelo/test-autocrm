@@ -1,0 +1,140 @@
+.header {
+  padding-bottom: 64px;
+
+  @include vp-767{
+    padding-bottom: 16px;
+  }
+
+  &__wrap {
+    padding: 57px 0 0 0;
+    width: 100%;
+    display: flex;
+
+    @include vp-1023 {
+      padding: 40px 0 0 0;
+    }
+
+    @include vp-767{
+      padding: 15px 0 0 0;
+    }
+  }
+
+  &__logo-block {
+    margin-right: 53px;
+
+    @include vp-1439 {
+      margin-right: 4.5%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  &__logo-text {
+    display: block;
+    font-family: $ff-montserrat;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 12px;
+  }
+
+  &__nav-block {
+    margin-right: 1vw;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    .main-nav__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include vp-767 {
+        justify-content: space-between;
+      }
+    }
+
+    .main-nav__item {
+      margin-right: 30px;
+
+      @include vp-1439 {
+        margin-right: 2.15vw;
+      }
+    }
+
+    .main-nav__item:last-child {
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    .main-nav__item:nth-last-child(2) {
+      @include vp-767 {
+        margin: 0;
+      }
+    }
+
+    .main-nav__item:last-child {
+      margin-right: 0;
+    }
+
+    .main-nav__link {
+      @include vp-767 {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__contacts-block {
+    margin-left: auto;
+    max-width: 35%;
+
+    .contacts__address {
+      display: none;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      width: max-content;
+      max-width: 100%;
+    }
+
+    .contacts__social {
+      padding-top: 2px;
+      width: max-content;
+      max-width: 125px;
+    }
+
+    .contacts__social .contacts__link:not(:last-child) {
+      display: block;
+      margin-right: 30px;
+
+      @include vp-1439 {
+        margin-right: 2vw;
+      }
+
+    }
+
+    .contacts__phone {
+      margin-right: 47px;
+      margin-top: 4px;
+
+      @include vp-1439 {
+        margin-right: 3.3vw;
+      }
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+}

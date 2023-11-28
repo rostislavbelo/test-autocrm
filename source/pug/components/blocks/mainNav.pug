@@ -1,0 +1,80 @@
+-
+  const headerLinks = [
+    {
+      href: "#",
+      text: "Услуги"
+    },
+    {
+      href: "#",
+      text: "Виджеты"
+    },
+    {
+      href: "#",
+      text: "Интеграции"
+    },
+    {
+      href: "#",
+      text: "Кейсы"
+    },
+    {
+      href: "#",
+      text: "Сертификаты"
+    },
+  ]
+
+-
+  const footerLinks = [
+    {
+      href: "#",
+      text: "Расчёт стоимости"
+    },
+    {
+      href: "#",
+      text: "Кейсы"
+    },
+    {
+      href: "#",
+      text: "Услуги"
+    },
+    {
+      href: "#",
+      text: "Благодарственные письма"
+    },
+    {
+      href: "#",
+      text: "Виджеты"
+    },
+      {
+      href: "#",
+      text: "Сертификаты"
+    },
+    {
+      href: "#",
+      text: "Интеграции"
+    },
+    {
+      href: "#",
+      text: "Блог на Youtube"
+    },
+    {
+      href: "#",
+      text: "Наши клиенты"
+    },
+    {
+      href: "#",
+      text: "Вопрос / Ответ"
+    },
+    {
+      href: "#",
+      text: "Благодарность клиентов"
+    },
+  ]
+
+
+mixin mainNav(data)
+  nav.main-nav
+    .main-nav__wrapper
+      ul.main-nav__list
+        each link in data
+          li.main-nav__item(class = currentUrl === link.href ? "is-active" : "")
+            a.main-nav__link(href=link.href)=link.text
